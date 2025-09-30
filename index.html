@@ -746,7 +746,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
     grid.innerHTML = items.map(cardHTML).join('');
   }
-  async async function safeLoad(){
+  async function safeLoad(){
     try{
       var res = await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
       var txt = await res.text();
