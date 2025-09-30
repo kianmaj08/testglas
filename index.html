@@ -632,7 +632,7 @@
     </div>`;
   }
   async function loadCards(){
-    const r = await fetch('data/cards.json',{cache:'no-cache'});
+    const r = await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
     const d = await r.json();
     return (d.cards||[]).filter(c=> c.is_published !== false);
   }
@@ -746,9 +746,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
     grid.innerHTML = items.map(cardHTML).join('');
   }
-  async function safeLoad(){
+  async async function safeLoad(){
     try{
-      var res = await fetch('data/cards.json', { cache:'no-cache' });
+      var res = await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
       var txt = await res.text();
       if (/^\s*</.test(txt)) throw new Error('cards.json lieferte HTML statt JSON – Pfad/Rewrite prüfen.');
       var data = JSON.parse(txt);

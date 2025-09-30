@@ -417,7 +417,7 @@
 <script>
 (function(){
   async function loadCards(){
-    const r=await fetch('data/cards.json',{cache:'no-cache'});
+    const r=await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
     const d=await r.json();
     return (d.cards||[]).filter(c=>c.is_published!==false);
   }
