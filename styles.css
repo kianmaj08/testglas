@@ -4070,3 +4070,44 @@ body{ font-family:'Sora', system-ui, -apple-system, Segoe UI, Roboto, Sans-Serif
   .qr-in-footer img{ width:52px; height:52px }
 }
 
+
+
+/* === Card Fade-In Animation (v1) === */
+.card {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .45s ease, transform .45s ease;
+  will-change: opacity, transform;
+}
+.card.visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; transform: none; }
+}
+/* Footer layout tidy (desktop grid, mobile stack) */
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+}
+.footer-inner .footer-meta { order: 1; }
+.footer-inner .cta-button { order: 2; }
+.footer-inner .qr-in-footer { order: 3; }
+@media (max-width: 720px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .footer-inner .footer-meta,
+  .footer-inner .cta-button,
+  .footer-inner .qr-in-footer {
+    justify-self: start;
+  }
+  .footer-inner .qr-in-footer img {
+    max-width: 140px;
+    height: auto;
+  }
+}

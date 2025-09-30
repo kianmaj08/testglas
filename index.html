@@ -179,8 +179,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <a class="cta-button" href="add-website.html" data-i18n="cta_add">Projekt hinzufügen</a>
       <div class="footer-meta">© 2025 oberstufe.site – v2.38a</div>
+      <a class='cta-button' data-i18n='cta_add' href='/add-website'>Projekt hinzufügen</a>
       <div class="qr-in-footer" id="qrBlock" title="QR-Code">
         <div class="share-label">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l5-5 5 5"/><path d="M12 12v2.38a"/></svg>
@@ -632,7 +632,7 @@
     </div>`;
   }
   async function loadCards(){
-    const r = await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
+    const r = await fetch('/data/cards.json',{cache:'no-cache'});
     const d = await r.json();
     return (d.cards||[]).filter(c=> c.is_published !== false);
   }
@@ -641,15 +641,7 @@
     const items=cards.filter(c=> (c.page||'')==='home');
     grid.innerHTML = items.map(cardHTML).join('');
   
-    
-      // reveal-cards fallback
-      requestAnimationFrame(function(){ document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); }); });
-// reveal-cards: ensure visibility even if observer missed initial render
-    try {
-      requestAnimationFrame(function(){
-        document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); });
-      });
-    } catch(_) {}
+      if(window.attachCardObserver){ window.attachCardObserver(); }
 }
   document.addEventListener('DOMContentLoaded', async ()=>{
     try{
@@ -749,26 +741,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
   function renderHome(cards){
     var grid = document.getElementById('websitesGrid'); if(!grid) return;
-    var items = (cards||[]).filter(function(c){ return ((c.page||'').trim().toLowerCase()==='home') && (c.is_published!==false); 
-    // reveal-cards: ensure visibility even if observer missed initial render
-    try {
-      requestAnimationFrame(function(){
-        document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); });
-      });
-    } catch(_) {}
-});
+    var items = (cards||[]).filter(function(c){ return ((c.page||'').trim().toLowerCase()==='home') && (c.is_published!==false); });
     if(!items.length){
       showGridError('Keine Karten gefunden. Prüfe /data/cards.json und ob "page": "home" gesetzt ist.');
       return;
     }
     grid.innerHTML = items.map(cardHTML).join('');
   
-      // reveal-cards fallback
-      requestAnimationFrame(function(){ document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); }); });
+      if(window.attachCardObserver){ window.attachCardObserver(); }
 }
   async function safeLoad(){
     try{
-      var res = await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
+      var res = await fetch('/data/cards.json', { cache:'no-cache' });
       var txt = await res.text();
       if (/^\s*</.test(txt)) throw new Error('cards.json lieferte HTML statt JSON – Pfad/Rewrite prüfen.');
       var data = JSON.parse(txt);
@@ -784,6 +768,35 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }else{
     safeLoad();
   }
+})();
+</script>
+
+
+<script>
+// Attach IntersectionObserver after render for smooth fade-in
+(function(){
+  function attachCardObserver(){
+    try {
+      var cards = document.querySelectorAll('#websitesGrid .card');
+      if(!cards.length) return;
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      cards.forEach(function(c){ io.observe(c); });
+    } catch(e){
+      // Fallback: make all visible if IO not supported
+      requestAnimationFrame(function(){
+        document.querySelectorAll('#websitesGrid .card').forEach(function(el){ el.classList.add('visible'); });
+      });
+    }
+  }
+  // Expose globally
+  window.attachCardObserver = attachCardObserver;
 })();
 </script>
 
