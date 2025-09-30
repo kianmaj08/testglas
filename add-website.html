@@ -25,28 +25,86 @@
       </div>
       <nav class="nav">
         <a href="index.html" data-i18n="nav_home" class="active">Home</a>
-        <a href="powerpoints.html" data-i18n="nav_pp" class="">PowerPoints</a>
-        <a href="videos.html" data-i18n="nav_videos" class="">Videos</a>
+        <a href="powerpoints.html" data-i18n="nav_pp">PowerPoints</a>
+        <a href="videos.html" data-i18n="nav_videos">Videos</a>
+        <a href="spiele.html" data-i18n="nav_games">Spiele</a>
       </nav>
-      <div class="right"><button class="menu-btn" id="menuBtn" aria-haspopup="true" aria-expanded="false" aria-label="Menü">
-          <span class="menu-icon" aria-hidden="true"><span class="bar"></span><span class="bar"></span><span class="bar"></span></span>
-        </button><div class="dropdown" id="menuList" role="menu" aria-label="Menü">
-  <div class="menu-stack">
-    <a href="javascript:void(0)" class="btn btn-menu" data-modal="modalSettings">Einstellungen</a>
-    <a href="javascript:void(0)" class="btn btn-menu" data-modal="modalChangelog">Changelog</a>
-    <a href="javascript:void(0)" class="btn btn-menu" data-modal="modalLegend">Legende</a>
-    <a href="javascript:void(0)" class="btn btn-menu" data-modal="modalContact">Kontakt</a>
-    <a href="/admin" target="_blank" rel="noopener" class="btn btn-menu">Admin&nbsp;Login</a>
-  </div>
+      <div class="right">
 </div></div></div></div></div>
       </div>
     </div>
-  </header>
+  <!-- Staggered Menu with Uiverse Burger + Inline Settings -->
+<div class="sm-wrap">
+  <div class="sm-header-btn">
+    <!-- From Uiverse.io by Cevorob -->
+    <label class="burger" for="burger" aria-label="Menü öffnen/schließen">
+      <input type="checkbox" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <div class="sm-layers">
+    <div class="sm-layer"></div>
+    <div class="sm-layer"></div>
+  </div>
+
+  <aside class="sm-panel" aria-hidden="true">
+    <div class="sm-head">
+      <a class="sm-logo" href="index.html">oberstufe.site</a>
+    </div>
+    <ul class="sm-list" data-numbering="true">
+      <li class="sm-item"><a class="sm-link" data-idx="01" href="index.html" aria-label="Zur Startseite">Home</a></li>
+      <li class="sm-item"><a class="sm-link" data-idx="02" href="#" data-inline="settings" aria-label="Einstellungen umschalten">Einstellungen</a></li>
+      <li class="sm-item"><a class="sm-link" data-idx="03" href="admin/index.html" aria-label="Zum Admin-Login">Admin Login</a></li>
+      <li class="sm-item"><a class="sm-link" data-idx="04" href="#" aria-disabled="true">Coming Soon</a></li>
+    </ul>
+
+    <div class="sm-settings" data-open="false" aria-label="Einstellungen">
+      <h3>Darstellung</h3>
+      <div class="sm-setting-row">
+        <input id="sm-theme-switch" class="sm-switch" type="checkbox" />
+        <label for="sm-theme-switch" class="sm-setting-label">Dark&nbsp;Mode</label>
+      </div>
+    </div>
+
+    <div class="sm-socials">
+      <a href="mailto:info@oberstufe.site">Gmail</a>
+      <a href="https://docs.google.com" target="_blank" rel="noopener">Google Docs</a>
+    </div>
+  </aside>
+</div>
+<!-- /Staggered Menu -->
+</header>
 
 
 
   <main class="container">
-    <section class="hero"><h1 data-i18n="add_title">Wie kann ich selbst ein Projekt hinzufügen?</h1><p data-i18n="add_sub">Es gibt verschiedene Möglichkeiten, dein Projekt bei uns einzubringen.</p></section>
+
+<section class="section">
+  <div class="container">
+    <h1>Wie kann ich selbst ein Projekt hinzufügen?</h1>
+    <p class="muted">Es gibt verschiedene Möglichkeiten, dein Projekt bei uns einzubringen.</p>
+    <div class="card-grid three-cols">
+      <article class="card glass">
+        <h3>Ansprechen in der Schule</h3>
+        <p>Sprich uns einfach in der Schule an – wir schauen gemeinsam, wie wir dein Projekt einbinden können.</p>
+      </article>
+      <article class="card glass">
+        <h3>E‑Mail schreiben</h3>
+        <p>Schick uns eine E‑Mail mit deiner Idee – wir gucken dann, was wir tun können.</p>
+        <p><a class="link" href="mailto:oberstufesite@gmail.com">oberstufesite@gmail.com</a></p>
+      </article>
+      <article class="card glass">
+        <h3>Feedback‑Formular</h3>
+        <p>Nutze unser Formular, wenn du uns Details schicken möchtest.</p>
+        <p><a class="link" href="https://docs.google.com/forms/d/e/1FAIpQLSc7hitAkvgDHXnOKgRpvolibMhm3iHeag_V-Azm4Mz8zef63w/viewform?usp=dialog" target="_blank" rel="noopener">Zum Formular – wähle „Sonstiges“ und gib deinen Namen an.</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
 
     <section class="grid three">
       <article class="card card--plain card--soft"><h3 data-i18n="add_card1_h">Ansprechen in der Schule</h3><p data-i18n="add_card1_p">Sprich uns einfach in der Schule an – wir schauen gemeinsam, wie wir dein Projekt einbinden können.</p></article>

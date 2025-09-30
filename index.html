@@ -179,8 +179,8 @@
 
   <footer>
     <div class="container footer-inner">
+      <a class="cta-button" href="add-website.html" data-i18n="cta_add">Projekt hinzufügen</a>
       <div class="footer-meta">© 2025 oberstufe.site – v2.38a</div>
-      <a class='cta-button' data-i18n='cta_add' href='/add-website'>Projekt hinzufügen</a>
       <div class="qr-in-footer" id="qrBlock" title="QR-Code">
         <div class="share-label">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l5-5 5 5"/><path d="M12 12v2.38a"/></svg>
@@ -640,9 +640,7 @@
     const grid=document.getElementById('websitesGrid'); if(!grid) return;
     const items=cards.filter(c=> (c.page||'')==='home');
     grid.innerHTML = items.map(cardHTML).join('');
-  
-      if(window.attachCardObserver){ window.attachCardObserver(); }
-}
+  }
   document.addEventListener('DOMContentLoaded', async ()=>{
     try{
       const cards = await loadCards();
@@ -747,9 +745,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       return;
     }
     grid.innerHTML = items.map(cardHTML).join('');
-  
-      if(window.attachCardObserver){ window.attachCardObserver(); }
-}
+  }
   async function safeLoad(){
     try{
       var res = await fetch('/data/cards.json', { cache:'no-cache' });
@@ -768,35 +764,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }else{
     safeLoad();
   }
-})();
-</script>
-
-
-<script>
-// Attach IntersectionObserver after render for smooth fade-in
-(function(){
-  function attachCardObserver(){
-    try {
-      var cards = document.querySelectorAll('#websitesGrid .card');
-      if(!cards.length) return;
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(entry){
-          if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.18 });
-      cards.forEach(function(c){ io.observe(c); });
-    } catch(e){
-      // Fallback: make all visible if IO not supported
-      requestAnimationFrame(function(){
-        document.querySelectorAll('#websitesGrid .card').forEach(function(el){ el.classList.add('visible'); });
-      });
-    }
-  }
-  // Expose globally
-  window.attachCardObserver = attachCardObserver;
 })();
 </script>
 
