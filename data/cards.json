@@ -1,0 +1,85 @@
+{
+  "cards": [
+    {
+      "authors": "Ein Projekt von Kian, Basit und Kamil.",
+      "created_at": "2025-09-29T01:18:00+02:00",
+      "url": "https://philexikon.netlify.app/",
+      "page": "home",
+      "status": "in_arbeit",
+      "subtitle": "Ein Lexikon für bekannte Philosophen.",
+      "title": "Philexikon",
+      "is_published": false,
+      "type": "website",
+      "tag": "philosophie",
+      "id": "Philexikon1244"
+    },
+    {
+      "authors": "Ein Projekt von Kian, Basit und Mark.",
+      "url": "https://pieterbruegel.netlify.app/",
+      "page": "home",
+      "status": "in_arbeit",
+      "subtitle": "Biografie, Kunstwerke und Hintergründe des Renaissance- Künstlers",
+      "title": "Pieter Bruegel",
+      "is_published": true,
+      "type": "website",
+      "tag": "kunst",
+      "id": "Pieterbruegel"
+    },
+    {
+      "authors": "Ein Projekt von Kian, Till, Mark und Danush.",
+      "url": "https://wienerkongress.netlify.app/",
+      "page": "home",
+      "status": "in_arbeit",
+      "subtitle": "Ein kurzer Überblick zum Wiener Kongress",
+      "title": "Wiener Kongress",
+      "is_published": true,
+      "type": "website",
+      "tag": "geschichte",
+      "id": "Wienerkongress"
+    },
+    {
+      "url": "https://chatbbc.netlify.app/",
+      "page": "home",
+      "status": "fertig",
+      "subtitle": "Eine Hochentwickelte Ai aus Azerbaidjan",
+      "title": "ClosedAi - ChatBBC",
+      "is_published": true,
+      "type": "website",
+      "tag": "informatik",
+      "id": "Closedai"
+    },
+    {
+      "url": "https://stochastosino.netlify.app/#",
+      "page": "home",
+      "status": "in_arbeit",
+      "subtitle": "Stochastik basierte Mathematik Spiele",
+      "title": "Stochastosino Beta",
+      "is_published": true,
+      "type": "website",
+      "tag": "informatik",
+      "id": "Stochastosino"
+    },
+    {
+      "url": "https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/9acebe6b9610174b979cc5303462dd81/73790f78-a61c-451b-9a21-5cb77b830f76/index.html",
+      "page": "home",
+      "status": "test",
+      "subtitle": "(Claude Labs Test)",
+      "title": "Ai World ",
+      "is_published": true,
+      "type": "website",
+      "tag": "informatik",
+      "id": "aiworld"
+    },
+    {
+      "url": "https://physikgk.netlify.app/",
+      "page": "home",
+      "status": "in_arbeit",
+      "subtitle": "Alle Themen des Physik Gk´s in der Q1",
+      "title": "Physik Q1",
+      "is_published": true,
+      "type": "website",
+      "tag": "physik",
+      "id": "physik23432"
+    }
+  ]
+}

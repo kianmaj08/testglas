@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>oberstufe.site</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/staggered-menu.css">
+  <link rel="stylesheet" href="assets/css/curved-loop.css">
+</head>
+<body>
+
+  
+  <header>
+    <div class="wrap">
+      <div class="left">
+        <a class="brand" href="index.html">oberstufe.site</a>
+      </div>
+      <nav class="nav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="powerpoints.html" data-i18n="nav_pp" class="active">PowerPoints</a>
+        <a href="videos.html" data-i18n="nav_videos">Videos</a>
+        <a href="spiele.html" data-i18n="nav_games">Spiele</a>
+      </nav>
+      <div class="right">
+</div></div></div></div></div>
+      </div>
+    </div>
+  <!-- Staggered Menu with Uiverse Burger + Inline Settings -->
+<div class="sm-wrap">
+  <div class="sm-header-btn">
+    <!-- From Uiverse.io by Cevorob -->
+    <label class="burger" for="burger" aria-label="Menü öffnen/schließen">
+      <input type="checkbox" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <div class="sm-layers">
+    <div class="sm-layer"></div>
+    <div class="sm-layer"></div>
+  </div>
+
+  <aside class="sm-panel" aria-hidden="true">
+    <div class="sm-head">
+      <a class="sm-logo" href="index.html">oberstufe.site</a>
+    </div>
+    <ul class="sm-list" data-numbering="true">
+      <li class="sm-item"><a class="sm-link" data-idx="01" href="index.html" aria-label="Zur Startseite">Home</a></li>
+      <li class="sm-item"><a class="sm-link" data-idx="02" href="#" data-inline="settings" aria-label="Einstellungen umschalten">Einstellungen</a></li>
+      <li class="sm-item"><a class="sm-link" data-idx="03" href="admin/index.html" aria-label="Zum Admin-Login">Admin Login</a></li>
+      <li class="sm-item"><a class="sm-link" data-idx="04" href="#" aria-disabled="true">Coming Soon</a></li>
+    </ul>
+
+    <div class="sm-settings" data-open="false" aria-label="Einstellungen">
+      <h3>Darstellung</h3>
+      <div class="sm-setting-row">
+        <input id="sm-theme-switch" class="sm-switch" type="checkbox" />
+        <label for="sm-theme-switch" class="sm-setting-label">Dark&nbsp;Mode</label>
+      </div>
+    </div>
+
+    <div class="sm-socials">
+      <a href="mailto:info@oberstufe.site">Gmail</a>
+      <a href="https://docs.google.com" target="_blank" rel="noopener">Google Docs</a>
+    </div>
+  </aside>
+</div>
+<!-- /Staggered Menu -->
+</header>
+<!-- Mobile Unter-Navigation -->
+<nav class="mobile-subnav">
+  <a href="index.html" class="">Home</a>
+  <a href="powerpoints.html" class="active">PowerPoints</a>
+  <a href="videos.html" class="">Videos</a>
+  <a href="spiele.html" class="">Spiele</a>
+</nav>
+
+
+
+
+  <section class="hero">
+    <div class="container">
+      <h1>PowerPoints</h1>
+      <p class="meta"></p>
+</div>
+  </section>
+
+    <section class="section">
+    <div class="container">
+      <section class="section curved-loop-section">
+  <div class="container">
+    <div class="curved-loop-wrap" aria-hidden="true">
+      <svg class="curved-loop-svg" viewBox="0 0 1440 120" role="img" aria-label="Coming soon">
+        <defs>
+          <path id="cl-path" d="M-100,40 Q500,440 1540,40" fill="none" stroke="transparent" />
+        </defs>
+        <text>
+          <textPath href="#cl-path" startOffset="-800px">
+            COMING SOON · COMING SOON · COMING SOON · COMING SOON · COMING SOON · COMING SOON ·
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div id="pageGrid" class="card-grid two-cols"></div>
+    </div>
+  </section>
+<footer>
+    <div class="container footer-inner">
+      <a class="cta-button" href="add-website.html" data-i18n="cta_add">Projekt hinzufügen</a>
+      <div class="footer-meta">© 2025 oberstufe.site – v2.38a</div>
+      <div class="qr-in-footer" id="qrBlock" title="QR-Code">
+        <div class="share-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l5-5 5 5"/><path d="M12 12v2.38a"/></svg>
+          <span data-i18n="share_site">Teile diese Website!</span>
+        </div>
+        <img src="qr-placeholder.jpg" alt="QR-Code">
+      </div>
+    </div>
+  <section class="section">
+    <div class="container">
+      <div id="pageGrid" class="card-grid two-cols"></div>
+    </div>
+  </section>
+
+  </footer>
+<div id="overlayGlobal" class="overlay-backdrop"></div>
+
+  <div id="modalSettings" class="modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+    <div class="modal-header">
+      <h3 id="settingsTitle" data-i18n="settings_title">Einstellungen</h3>
+      <button id="closeSettings" class="btn">Schließen</button>
+    </div>
+    <div class="modal-body">
+      <div class="row-setting">
+        <span data-i18n="set_theme">Theme</span>
+        <div class="icon-toggle" role="group" aria-label="Theme">
+          <button id="themeLight" class="icon-btn" title="Hell" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+          <button id="themeDark" class="icon-btn" title="Dunkel" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="row-setting">
+        <span data-i18n="set_lang">Sprache</span>
+        <div>
+          <button id="langDe" class="btn" style="margin-right:6px;">DE</button>
+          <button id="langEn" class="btn">EN</button>
+        </div>
+      </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <div id="modalChangelog" class="modal" role="dialog" aria-modal="true" aria-labelledby="changelogTitle">
+    <div class="modal-header"><h3 id="changelogTitle">Changelog</h3><button id="closeChangelog" class="btn">Schließen</button>
+<ul><li>v2.14 – Navigation verbessert, Menü überarbeitet (21.09.2025)</li><li>v2.15 – Darkmode eingeführt (21.09.2025)</li><li>v2.16 – Footer überarbeitet (21.09.2025)</li><li>v2.17 – Scroll-Up Button eingefügt (21.09.2025)</li><li>v2.18 – Header/Navi Bugfixes (21.09.2025)</li><li>v2.19 – Design-Optimierungen, Animationen (21.09.2025)</li><li>v2.20 – Farbpalette angepasst (21.09.2025)</li><li>v2.21 – Changelog hinzugefügt (21.09.2025)</li><li>v2.22 – Kleine Layout-Fixes (21.09.2025)</li><li>v2.23 – Neue Version bereitgestellt (21.09.2025)</li><li>v2.24 – Bugfix Scroll-Up Button (21.09.2025)</li><li>v2.25 – Feedback Button hinzugefügt (21.09.2025)</li><li>v2.26 – Korrektur Scroll-Button Verhalten (21.09.2025)</li><li>v2.27 – Chips Design begonnen (21.09.2025)</li><li>v2.28 – Chips farbig (erste Version) (21.09.2025)</li><li>v2.29 – Chips Bugfix (korrekte Farben) (21.09.2025)</li><li>v2.30 – Chips Variante A umgesetzt (21.09.2025)</li><li>v2.31 – Chips Farben in allen Fächern gefixt (21.09.2025)</li><li>v2.32 – Dark Mode Kontrast & Elemente verbessert (21.09.2025)</li><li>v2.33 – Dark Mode Navy + Beige Akzente (21.09.2025)</li><li>v2.34 – Dark Mode Palette #222831/#393E46/#948979/#DFD0B8 (21.09.2025)</li><li>v2.35 – Dark Mode: Titel Anthrazit (21.09.2025)</li><li>v2.36 – Interne Robustheit verbessert (21.09.2025)</li><li>v2.37 – Listener/JS-Struktur bereinigt (21.09.2025)</li><li>v2.38 – Finales Update vor 2.38a Release (21.09.2025)</li></ul>
+</div>
+    <div class="modal-body">
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v1.0 – 18.09.2025</span> · Erste Veröffentlichung der Homepage</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#22C55E;">Erweiterungen – 18.09.2025</span> · Philexikon & Pieter Bruegel integriert</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.0 – 18.09.2025</span> · Überarbeitetes Design</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.1 – 18.09.2025</span> · Feinschliff</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.2 – 19.09.2025</span> · Wiener Kongress, Suche & Tags</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.4 – 20.09.2025</span> · QR im Footer, CTA, Design-Fixes</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#6B7280;">v2.6 – 20.09.2025</span> · Farben wie 12.4, FAQ-Akzente, Menü-Align Fix</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#22C55E;">v2.7 – 20.09.2025</span> · PowerPoints & Videos, Share-Hinweis, Header-Navigation</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#22C55E;">v2.7e – 20.09.2025</span> · Komplettpaket (alle Unterseiten), PPT-Downloads vorbereitet</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.8 – 20.09.2025</span> · Fächer-Abschnitte (PP), DE/EN, QR-Option, „Unsere Websites“</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#22C55E;">v2.8a – 20.09.2025</span> · PP-Chips als Tags, Add-Seite 3 Spalten</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#6B7280;">v2.8b – 20.09.2025</span> · Bugfix: getrennte Seiten, saubere Header/Footer</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#6B7280;">v2.8c – 20.09.2025</span> · Bugfix: kein Zusammenkleben der Seiten</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#6B7280;">v2.8d – 20.09.2025</span> · Einstellungen repariert, Chips hübscher, CTA auf Add-Seite ausgeblendet</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.9 – 20.09.2025</span> · Changelog-Overlay, Dark Mode verbessert, Chips Variante A, Legende & Sprache gefixt</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.10 – 20.09.2025</span> · Hamburger-Icon (3 Striche) & Bugfixes; neue Fachfarben</li>
+        <li style="margin:10px 0;"><span style="font-weight:800; color:#2563EB;">v2.11 – 20.09.2025</span> · Menü-Overlays (Kontakt/Changelog/Legende/Einstellungen), Theme-Switch mit SVG-Sonne/Mond, vollständige DE/EN, Fachfarben fix</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="modalLegend" class="modal" role="dialog" aria-modal="true" aria-labelledby="legendTitle">
+    <div class="modal-header"><h3 id="legendTitle">Legende</h3><button id="closeLegend" class="btn">Schließen</button></div>
+    <div class="modal-body">
+      <h4 style="margin:10px 0 6px">Tags</h4>
+      <p>Farbige Schlagworte geben die Fachbereiche an:</p>
+      <div class="legend-tags">
+<span class="tag chemie">Chemie</span>
+        <span class="tag deutsch">Deutsch</span>
+        <span class="tag erdkunde">Erdkunde</span>
+        <span class="tag geschichte">Geschichte</span>
+        <span class="tag informatik">Informatik</span>
+        <span class="tag kunst">Kunst</span>
+        <span class="tag mathe">Mathe</span>
+        <span class="tag physik">Physik</span>
+        <span class="tag philosophie">Philosophie</span>
+        <span class="tag sowi">SoWi</span>
+        <span class="tag sport">Sport</span>
+</div>
+
+      <h4 style="margin:16px 0 6px">Status‑Badges</h4>
+      <p>Zeigen den aktuellen Stand eines Projekts:</p>
+      <div class="legend-status">
+        <span class="status green">Fertig</span>
+        <span class="status yellow">In Arbeit</span>
+        <span class="status red">Test</span>
+        <span class="status blue">Coming&nbsp;Soon</span>
+</div>
+      <ul class="legend-list">
+  <ul class="status-list">
+    <li class="status-item"><span class="status green">Fertig</span><span class="name">Fertig</span><span class="desc">Projekt/Präsentation ist abgeschlossen.</span></li>
+    <li class="status-item"><span class="status yellow">In Arbeit</span><span class="name">In Arbeit</span><span class="desc">Inhalte werden noch erstellt oder überarbeitet.</span></li>
+    <li class="status-item"><span class="status red">Test</span><span class="name">Test</span><span class="desc">Entwurf oder Beta; kann Fehler enthalten.</span></li>
+    <li class="status-item"><span class="status blue">Coming Soon</span><span class="name">Coming Soon</span><span class="desc">Geplant, aber noch nicht veröffentlicht.</span></li>
+  </ul>
+</ul>
+
+    </div>
+    </div>
+  </div>
+
+  <div id="modalContact" class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="modal-header"><h3 id="contactTitle" data-i18n="contact_title">Kontakt</h3><button id="closeContact" class="btn">Schließen</button></div>
+    <div class="modal-body">
+      <p><strong>E-Mail:</strong> <a href="mailto:oberstufesite@gmail.com" class="link">oberstufesite@gmail.com</a></p>
+      <p><a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSc7hitAkvgDHXnOKgRpvolibMhm3iHeag_V-Azm4Mz8zef63w/viewform?usp=dialog" target="_blank" rel="noopener" data-i18n="contact_form">Zum Feedback-Formular</a></p>
+    </div>
+  </div>
+
+  <a class="feedback-btn" id="feedbackBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSc7hitAkvgDHXnOKgRpvolibMhm3iHeag_V-Azm4Mz8zef63w/viewform?usp=dialog" target="_blank" rel="noopener" data-i18n="feedback">Feedback</a>
+  <button class="to-top" id="toTopBtn" aria-label="Nach oben scrollen" title="Nach oben"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><circle cx="24" cy="24" r="17" fill="none" stroke="rgba(255,255,255,.65)" stroke-width="2"/><path d="M16 26l8-8 8 8" fill="none" stroke="#2563EB" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+
+
+<script>
+/* v2.17 theme js */
+(function(){
+  const themeLight=document.getElementById('themeLight');
+  const themeDark=document.getElementById('themeDark');
+  function setTheme(next){
+    document.documentElement.setAttribute('data-theme', next);
+    try{ localStorage.setItem('theme', next);}catch(e){}
+    if(themeLight) themeLight.classList.toggle('active', next==='light');
+    if(themeDark) themeDark.classList.toggle('active', next==='dark');
+  }
+  const saved=localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
+  setTheme(saved);
+  themeLight && themeLight.addEventListener('click', ()=> setTheme('light'));
+  themeDark && themeDark.addEventListener('click', ()=> setTheme('dark'));
+})();
+</script>
+
+
+
+
+<script>
+/* v2.26 unified scroll visibility */
+(function(){
+  const toTopBtn = document.getElementById('toTopBtn');
+  const feedbackBtn = document.getElementById('feedbackBtn');
+  function sync(){
+    const y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const show = y > 160;
+    if(toTopBtn) toTopBtn.classList.toggle('show', show);
+    if(feedbackBtn) feedbackBtn.classList.toggle('show', show);
+  }
+  window.addEventListener('scroll', sync, {passive:true});
+  sync();
+  if(toTopBtn){
+    toTopBtn.addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+</script>
+
+
+<script>
+/* v2.37 – Language listeners harden */
+(function(){
+  function safeApply(lang){
+    if (typeof applyI18N === 'function') { applyI18N(lang); }
+  }
+  var langDeBtn = document.getElementById('langDe');
+  var langEnBtn = document.getElementById('langEn');
+  if(langDeBtn){ langDeBtn.onclick = function(){ safeApply('de'); }; }
+  if(langEnBtn){ langEnBtn.onclick = function(){ safeApply('en'); }; }
+})();
+</script>
+
+
+<script>
+// v2.41a helpers
+(function(){
+  // Title anthracite on index & 200
+  try{
+    var h1 = document.querySelector('h1');
+    if(h1 && /Willkommen auf oberstufe\.site/i.test(h1.textContent)){
+      h1.classList.add('site-title','title-anthrazit');
+    }
+  }catch(e){}
+
+  // Mark feedback card to color links blue
+  try{
+    document.querySelectorAll('.card, section, div').forEach(function(el){
+      if(/Kann ich Feedback geben oder Ideen einreichen\?/i.test(el.textContent)){
+        // add class to closest card-like container
+        var target = el.closest('.card') || el;
+        target.classList.add('feedback-card');
+      }
+    });
+  }catch(e){}
+})();
+</script>
+
+
+<!-- Netlify Identity (login status only) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+
+
+<div id="cardsPresGrid" class="card-grid two-cols"></div>
+
+<script>
+(async function(){
+  try{
+    const res = await fetch('data/cards.json', {cache:'no-cache'});
+    const data = await res.json();
+    const list = (data.cards||[]).filter(c => (c.is_published !== false) && (c.type === 'presentation'));
+    const el = document.getElementById('cardsPresGrid');
+    if(!el) return;
+    el.innerHTML = list.map(c => `
+      <a class="card card--${c.tag||'default'}" href="${c.url}" target="_blank" rel="noopener">
+        ${c.image_url ? `<img class="card-thumb" src="${c.image_url}" alt="">` : ''}
+        <h3>${c.title}</h3>
+        ${c.subtitle ? `<p class="muted">${c.subtitle}</p>` : ''}
+        <div class="meta"><span class="tag ${c.tag||''}">${c.tag||''}</span><span class="type">${c.type||''}</span></div>
+      </a>
+    `).join('');
+  }catch(e){ console.error('cards load error', e); }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// v2.70 Menu + Modals + Theme
+(function(){
+  const btn = document.getElementById('menuBtn');
+  const list = document.getElementById('menuList');
+  const overlay = document.getElementById('overlayGlobal');
+
+  function openMenu(){ if(list){ list.classList.add('open'); } if(btn){ btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); } }
+  function closeMenu(){ if(list){ list.classList.remove('open'); } if(btn){ btn.classList.remove('open'); btn.setAttribute('aria-expanded','false'); } }
+
+  btn && btn.addEventListener('click', (e)=>{ e.stopPropagation(); list && (list.classList.contains('open')?closeMenu():openMenu()); });
+
+  document.addEventListener('click', (e)=>{
+    if(list && !list.contains(e.target) && !btn.contains(e.target)) closeMenu();
+  });
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape'){ closeMenu(); closeAllModals(); }});
+
+  // Modals
+  const modals = Array.from(document.querySelectorAll('.modal'));
+  function closeAllModals(){ modals.forEach(m=>m.classList.remove('open')); overlay && overlay.classList.remove('show'); }
+  function openModal(id){ closeMenu(); const m=document.getElementById(id); if(m){ m.classList.add('open'); overlay && overlay.classList.add('show'); } }
+
+  document.querySelectorAll('#menuList [data-modal]').forEach(el=>{
+    el.addEventListener('click', ()=> openModal(el.getAttribute('data-modal')));
+  });
+  overlay && overlay.addEventListener('click', closeAllModals);
+  document.querySelectorAll('[data-close]').forEach(x=> x.addEventListener('click', closeAllModals));
+
+  // Theme
+  function setTheme(next){
+    document.documentElement.setAttribute('data-theme', next);
+    try{ localStorage.setItem('theme', next);}catch(e){}
+    const tL=document.getElementById('themeLight'); const tD=document.getElementById('themeDark');
+    tL && tL.classList.toggle('active', next==='light');
+    tD && tD.classList.toggle('active', next==='dark');
+  }
+  const saved = (function(){
+    try{ return localStorage.getItem('theme'); }catch(e){ return null; }
+  })() || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light');
+  setTheme(saved);
+
+  const tL=document.getElementById('themeLight'); const tD=document.getElementById('themeDark');
+  tL && tL.addEventListener('click', ()=> setTheme('light'));
+  tD && tD.addEventListener('click', ()=> setTheme('dark'));
+})();
+</script>
+
+<script>
+// v2.61 – Client-side search minimal (no counter, no layout shift)
+(function(){
+  const input = document.getElementById('searchInput');
+  if(!input) return;
+  function norm(t){ return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+  function items(){ return Array.from(document.querySelectorAll('.card')); }
+  function matches(el, q){
+    if(!q) return true;
+    const hay = norm(el.textContent);
+    const tags = (el.getAttribute('data-tags')||'') + ' ' + (el.getAttribute('data-tag')||'');
+    return hay.includes(q) || norm(tags).includes(q);
+  }
+  function apply(q){
+    const qn = norm(q);
+    items().forEach(el=>{ el.style.display = matches(el, qn) ? '' : 'none'; });
+  }
+  input.addEventListener('input', ()=> apply(input.value));
+  document.addEventListener('keydown', (e)=>{ if((e.ctrlKey||e.metaKey) && (e.key==='k'||e.key==='K')){ e.preventDefault(); input.focus(); }});
+})();
+</script>
+
+
+
+
+
+
+<script>
+(function(){
+  async function loadCards(){
+    const r=await fetch('data/cards.json',{cache:'no-cache'});
+    const d=await r.json();
+    return (d.cards||[]).filter(c=>c.is_published!==false);
+  }
+  function tagPill(tag){ return tag?`<span class="tag ${tag}">${tag}</span>`:''; }
+  function statusBtnHTML(status){
+    const map={ fertig:['Fertig','status-done'], in_arbeit:['In Arbeit','status-in'], test:['Test','status-test'], coming_soon:['Coming Soon','status-soon'] };
+    const x=map[status]; return x?`<span class="status-btn ${x[1]}">${x[0]}</span>`:'';
+  }
+  function cardHTML(c){
+  const tag=(c.tag||'').toLowerCase();
+  const authorsStr = Array.isArray(c.authors) ? c.authors.map(a=> (a && a.name)?a.name:a).join(', ') : (c.authors||'');
+  return `<div class="card card--${tag}">
+      ${c.image_url?`<img class="card-thumb" src="${c.image_url}" alt="">`:''}
+      <h3>${c.title||''}</h3>
+      ${c.subtitle?`<p class="muted">${c.subtitle}</p>`:''}
+      ${authorsStr?`<p class="card-authors muted">${authorsStr}</p>`:''}
+      <div class="row-tags"><div class="left">${tagPill(tag)}</div></div>
+      <div class="actions"><a class="btn btn-primary" href="${c.url||'#'}" target="_blank" rel="noopener">Öffnen</a>${statusBtnHTML(c.status)}</div>
+    </div>`;
+})();
+</script>
+
+  <script src="assets/staggered-menu.js"></script>
+  <script src="assets/js/curved-loop.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', ()=>{
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  cards.forEach(card => observer.observe(card));
+});
+</script>
+</body>
+</html>
