@@ -356,7 +356,7 @@
 <script>
 (async function(){
   try{
-    const res = await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
+    const res = await fetch('data/cards.json', {cache:'no-cache'});
     const data = await res.json();
     const list = (data.cards||[]).filter(c => (c.is_published !== false) && (c.type === 'presentation'));
     const el = document.getElementById('cardsPresGrid');
@@ -461,7 +461,7 @@
 <script>
 (function(){
   async function loadCards(){
-    const r=await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
+    const r=await fetch('data/cards.json',{cache:'no-cache'});
     const d=await r.json();
     return (d.cards||[]).filter(c=>c.is_published!==false);
   }

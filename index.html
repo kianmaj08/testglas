@@ -640,7 +640,17 @@
     const grid=document.getElementById('websitesGrid'); if(!grid) return;
     const items=cards.filter(c=> (c.page||'')==='home');
     grid.innerHTML = items.map(cardHTML).join('');
-  }
+  
+    
+      // reveal-cards fallback
+      requestAnimationFrame(function(){ document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); }); });
+// reveal-cards: ensure visibility even if observer missed initial render
+    try {
+      requestAnimationFrame(function(){
+        document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); });
+      });
+    } catch(_) {}
+}
   document.addEventListener('DOMContentLoaded', async ()=>{
     try{
       const cards = await loadCards();
@@ -739,13 +749,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
   }
   function renderHome(cards){
     var grid = document.getElementById('websitesGrid'); if(!grid) return;
-    var items = (cards||[]).filter(function(c){ return ((c.page||'').trim().toLowerCase()==='home') && (c.is_published!==false); });
+    var items = (cards||[]).filter(function(c){ return ((c.page||'').trim().toLowerCase()==='home') && (c.is_published!==false); 
+    // reveal-cards: ensure visibility even if observer missed initial render
+    try {
+      requestAnimationFrame(function(){
+        document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); });
+      });
+    } catch(_) {}
+});
     if(!items.length){
       showGridError('Keine Karten gefunden. Prüfe /data/cards.json und ob "page": "home" gesetzt ist.');
       return;
     }
     grid.innerHTML = items.map(cardHTML).join('');
-  }
+  
+      // reveal-cards fallback
+      requestAnimationFrame(function(){ document.querySelectorAll('.card').forEach(function(el){ el.classList.add('visible'); }); });
+}
   async function safeLoad(){
     try{
       var res = await fetch(new URL('data/cards.json', document.baseURI).toString(), { cache: 'no-store' });
